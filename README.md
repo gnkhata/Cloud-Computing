@@ -8,3 +8,6 @@ Class projects for cloud computing class at University of Arkansas Fall 2023
 The code also figue out how many map tasks are launched in the map stage
 – A map task is a job to process one file split.
 – it Does NOT use built-in counters, global variables, static variables. (This sample code reads three files)
+
+**NewText.java** gives the output of reducers is in the reversed alphabetical order (different from the original input).
+– NewText.java contains the java class defining the new “Text” data type.
