@@ -34,4 +34,6 @@ provided folder ComplexKeys.
 
 **PageRank.java** works with **Node1.java** to perform a parallel PageRank algorithm on a directed graph.
 
-**wordcount.scala** is a Spark program for counting the words from input file.
+**wordcount.scala** is a Spark program using Scala for counting words in an input file.
+
+**pagerank.scala** is a Spark program using Scala to implement a PageRank algorithm.
