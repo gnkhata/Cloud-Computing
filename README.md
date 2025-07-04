@@ -16,12 +16,12 @@ The code also figue out how many map tasks are launched in the map stage
 * A reducer is an instance of the reducer class.
 * The number of times the reduce method is called needs to be saved into the output file only once as “–reduce method count– xyz”, where xyz is the number.
 
-**relativefreq.java** work with **wordpair.java**  to calculate the relative frequencies of the co-occurrences of word pairs. Study the sample code from the
+**relativefreq.java** works with **wordpair.java**  to calculate the relative frequencies of the co-occurrences of word pairs. Study the sample code from the
 provided folder ComplexKeys.
 * Modifies the hashCode() method in the wordpair class so that all word pairs sharing the same left word go to the same reduce task.
 * Implements the reduce() method in the relativefreq.java to calculate the relative frequencies of word pairs
 
-**invertedindex.java** work with **wordpair1.java** to generate an inverted index given a set of input files. The input contains a set of text files. Each file contains words without punctuation marks in multiple lines. Assume that the size of a file is less than 128 MB. The files are named as “file0”, “file1”, “file2”, ......
+**invertedindex.java** works with **wordpair1.java** to generate an inverted index given a set of input files. The input contains a set of text files. Each file contains words without punctuation marks in multiple lines. Assume that the size of a file is less than 128 MB. The files are named as “file0”, “file1”, “file2”, ......
 * The generated inverted index is distributively saved in multiple files. An output file contains multiple lines. Each line consists of a term (i.e., a word) and the posting list.
 * In each output file, those lines are listed in an alphabetic order.
 * Each posting list is in such a format as “file name: # of occurrence; file name: # of occurrence...”. The posting list needs to be in the order of file names. Example: “file0: 18; file1: 20; file2: 3;”.
@@ -30,4 +30,6 @@ provided folder ComplexKeys.
 
 **GraphSearch.java** performs a parallel breadth-first search on a directed graph.
 
-**Node.java** work with **GraphSearch1.java** to perform an alternative parallel breadth-first search on a directed graph.
+**Node.java** works with **GraphSearch1.java** to perform an alternative parallel breadth-first search on a directed graph.
+
+**PageRank.java** works with **Node1.java** to perform a parallel PageRank algorithm on a directed graph.
