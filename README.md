@@ -11,3 +11,7 @@ The code also figue out how many map tasks are launched in the map stage
 
 **NewText.java** gives the output of reducers is in the reversed alphabetical order (different from the original input).
 – NewText.java contains the java class defining the new “Text” data type.
+
+**ReduceCallTimes.java** determines the number of times the reduce method is called in a reducer. It assumes that there is only one reducer in the reduce stage; It does not use any built-in counters; 
+* A reducer is an instance of the reducer class.
+* The number of times the reduce method is called needs to be saved into the output file only once as “–reduce method count– xyz”, where xyz is the number.
