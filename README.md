@@ -27,3 +27,5 @@ provided folder ComplexKeys.
 * Each posting list is in such a format as “file name: # of occurrence; file name: # of occurrence...”. The posting list needs to be in the order of file names. Example: “file0: 18; file1: 20; file2: 3;”.
 * It specifies 3 reducers, e.g., job.setNumReduceTasks(3);
 * The mapper uses pairs approach to generate complex keys, i.e., (term, filename), in the mapper stage. The value is the total number of occurrences the term appears in the file.
+
+**GraphSearch.java** performs a parallel breadth-first search on a directed graph.
