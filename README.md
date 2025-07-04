@@ -29,3 +29,5 @@ provided folder ComplexKeys.
 * The mapper uses pairs approach to generate complex keys, i.e., (term, filename), in the mapper stage. The value is the total number of occurrences the term appears in the file.
 
 **GraphSearch.java** performs a parallel breadth-first search on a directed graph.
+
+**Node.java** work with **GraphSearch1.java** to perform an alternative parallel breadth-first search on a directed graph.
