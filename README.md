@@ -1,5 +1,5 @@
 # Cloud-Computing
-Class projects for cloud computing class at University of Arkansas Fall 2023
+Class projects for cloud computing class at University of Arkansas Fall 2023. caution: Each module works independently with its specified task explained except where explicitly stated.
 
 **WordCount.java** performs word count, but also figures out how many times the map method is invoked in the map stage. it writes the number of times the map method is invoked to one output file. It Does NOT use any built-in counter or global counter for this purpose.
 
@@ -15,3 +15,8 @@ The code also figue out how many map tasks are launched in the map stage
 **ReduceCallTimes.java** determines the number of times the reduce method is called in a reducer. It assumes that there is only one reducer in the reduce stage; It does not use any built-in counters; 
 * A reducer is an instance of the reducer class.
 * The number of times the reduce method is called needs to be saved into the output file only once as “–reduce method count– xyz”, where xyz is the number.
+
+**relativefreq.java** and **wordpair.java** work together to calculate the relative frequencies of the co-occurrences of word pairs. Study the sample code from the
+provided folder ComplexKeys.
+* Modifies the hashCode() method in the wordpair class so that all word pairs sharing the same left word go to the same reduce task.
+* Implements the reduce() method in the relativefreq.java to calculate the relative frequencies of word pairs
