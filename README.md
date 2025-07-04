@@ -21,7 +21,7 @@ provided folder ComplexKeys.
 * Modifies the hashCode() method in the wordpair class so that all word pairs sharing the same left word go to the same reduce task.
 * Implements the reduce() method in the relativefreq.java to calculate the relative frequencies of word pairs
 
-**invertedindex.java** work with **wordpair1.java** to generate the inverted index given a set of input files. The input contains a set of text files. Each file contains words without punctuation marks in multiple lines. Assume that the size of a file is less than 128 MB. The files are named as “file0”, “file1”, “file2”, ......
+**invertedindex.java** work with **wordpair1.java** to generate an inverted index given a set of input files. The input contains a set of text files. Each file contains words without punctuation marks in multiple lines. Assume that the size of a file is less than 128 MB. The files are named as “file0”, “file1”, “file2”, ......
 * The generated inverted index is distributively saved in multiple files. An output file contains multiple lines. Each line consists of a term (i.e., a word) and the posting list.
 * In each output file, those lines are listed in an alphabetic order.
 * Each posting list is in such a format as “file name: # of occurrence; file name: # of occurrence...”. The posting list needs to be in the order of file names. Example: “file0: 18; file1: 20; file2: 3;”.
