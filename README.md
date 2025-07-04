@@ -1,5 +1,5 @@
 # Cloud-Computing
-Class projects for cloud computing class at University of Arkansas Fall 2023. caution: Each module works independently with its specified task explained except where explicitly stated.
+Class projects for cloud computing class at University of Arkansas Fall 2023. **Caution**: Each module works independently with its specified task explained except where explicitly stated.
 
 **WordCount.java** performs word count, but also figures out how many times the map method is invoked in the map stage. it writes the number of times the map method is invoked to one output file. It Does NOT use any built-in counter or global counter for this purpose.
 
@@ -16,7 +16,14 @@ The code also figue out how many map tasks are launched in the map stage
 * A reducer is an instance of the reducer class.
 * The number of times the reduce method is called needs to be saved into the output file only once as “–reduce method count– xyz”, where xyz is the number.
 
-**relativefreq.java** and **wordpair.java** work together to calculate the relative frequencies of the co-occurrences of word pairs. Study the sample code from the
+**relativefreq.java** work with **wordpair.java**  to calculate the relative frequencies of the co-occurrences of word pairs. Study the sample code from the
 provided folder ComplexKeys.
 * Modifies the hashCode() method in the wordpair class so that all word pairs sharing the same left word go to the same reduce task.
 * Implements the reduce() method in the relativefreq.java to calculate the relative frequencies of word pairs
+
+**invertedindex.java** work with **wordpair1.java** to generate the inverted index given a set of input files. The input contains a set of text files. Each file contains words without punctuation marks in multiple lines. Assume that the size of a file is less than 128 MB. The files are named as “file0”, “file1”, “file2”, ......
+* The generated inverted index is distributively saved in multiple files. An output file contains multiple lines. Each line consists of a term (i.e., a word) and the posting list.
+* In each output file, those lines are listed in an alphabetic order.
+* Each posting list is in such a format as “file name: # of occurrence; file name: # of occurrence...”. The posting list needs to be in the order of file names. Example: “file0: 18; file1: 20; file2: 3;”.
+* It specifies 3 reducers, e.g., job.setNumReduceTasks(3);
+* The mapper uses pairs approach to generate complex keys, i.e., (term, filename), in the mapper stage. The value is the total number of occurrences the term appears in the file.
