@@ -33,3 +33,5 @@ provided folder ComplexKeys.
 **Node.java** works with **GraphSearch1.java** to perform an alternative parallel breadth-first search on a directed graph.
 
 **PageRank.java** works with **Node1.java** to perform a parallel PageRank algorithm on a directed graph.
+
+**wordcount.scala** is a Spark program for counting the words from input file.
